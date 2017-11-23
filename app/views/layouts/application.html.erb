@@ -7,7 +7,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
@@ -25,6 +24,7 @@
       </ul>
     <% end %>
 
-  <%= yield %>
+<%= yield %>
+
 </body>
 </html>
