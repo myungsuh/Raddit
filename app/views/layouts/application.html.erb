@@ -10,7 +10,7 @@
   <header class ="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><% link_to "Raddit", root_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to "Raddit", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
           <% if user_signed_in? -%>
             <ul class="nav navbar-nav navbar-right">
@@ -29,12 +29,12 @@
     </div>
   </header>
 
-  <div id="main" class="container">
+  <div id="main_content" class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
 
-    <div id="container" class="col-md-9 center-block">
+    <div id="content" class="col-md-9 center-block">
       <%= yield %>
     </div>
   <div>
